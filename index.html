@@ -1,33 +1,144 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Dragon Ball Z: 손오반 각성</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AKI KO</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family: Inter, Arial, sans-serif;
+      background:#ffffff;
+      color:#111;
+      line-height:1.6;
+    }
+    header{
+      border-bottom:1px solid #eee;
+      padding:40px 20px 24px;
+      text-align:center;
+    }
+    .logo{
+      font-family:"Playfair Display", serif;
+      font-size:56px;
+      letter-spacing:6px;
+      font-weight:600;
+    }
+    .tagline{
+      margin-top:10px;
+      font-size:13px;
+      letter-spacing:2px;
+      color:#777;
+    }
+    nav{
+      margin-top:24px;
+      display:flex;
+      justify-content:center;
+      gap:28px;
+      font-size:13px;
+      letter-spacing:1px;
+    }
+    nav a{
+      text-decoration:none;
+      color:#111;
+    }
+    nav a:hover{
+      opacity:0.6;
+    }
+    main{
+      max-width:1100px;
+      margin:60px auto;
+      padding:0 20px;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:40px;
+    }
+    .card{
+      cursor:pointer;
+    }
+    .thumb{
+      width:100%;
+      aspect-ratio:4/5;
+      background:#f2f2f2;
+      margin-bottom:14px;
+    }
+    .category{
+      font-size:11px;
+      letter-spacing:1.5px;
+      color:#888;
+      margin-bottom:6px;
+      text-transform:uppercase;
+    }
+    .title{
+      font-family:"Playfair Display", serif;
+      font-size:20px;
+      margin-bottom:8px;
+    }
+    .meta{
+      font-size:12px;
+      color:#777;
+    }
+    footer{
+      margin-top:120px;
+      padding:40px 20px;
+      border-top:1px solid #eee;
+      text-align:center;
+      font-size:12px;
+      color:#777;
+    }
+    @media (max-width:900px){
+      .grid{grid-template-columns:repeat(2,1fr)}
+      .logo{font-size:44px}
+    }
+    @media (max-width:600px){
+      .grid{grid-template-columns:1fr}
+      nav{gap:16px}
+      .logo{font-size:36px}
+    }
+  </style>
 </head>
 <body>
-    <div id="game-container">
-        <canvas id="game-canvas"></canvas>
-        <div id="ui-layer">
-            <div id="dialogue-box">
-                <div id="speaker-name"></div>
-                <div id="dialogue-text"></div>
-                <div id="touch-indicator">터치</div>
-            </div>
-            <div id="scene-indicator">SCENE <span id="scene-number">1</span>/9</div>
-        </div>
-        <div id="loading-screen">
-            <div class="loading-text"손오반 각성</div>
-            <div class="loading-subtext">로딩 중...</div>
-            <div class="loading-bar">
-                <div class="loading-progress"></div>
-            </div>
-        </div>
-    </div>
-    <script src="script.js"></script>
+  <header>
+    <div class="logo">AKI KO</div>
+    <div class="tagline">MAGAZINE / ARCHIVE / ESSAY</div>
+    <nav>
+      <a href="#">ESSAY</a>
+      <a href="#">PHOTOGRAPHY</a>
+      <a href="#">CULTURE</a>
+      <a href="#">ABOUT</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- 게시물이 생기면 이 카드들을 복제해서 사용 -->
+    <section class="grid">
+      <article class="card">
+        <div class="thumb"></div>
+        <div class="category">Essay</div>
+        <div class="title">첫 글의 자리</div>
+        <div class="meta">Coming soon</div>
+      </article>
+
+      <article class="card">
+        <div class="thumb"></div>
+        <div class="category">Photography</div>
+        <div class="title">사진 작업</div>
+        <div class="meta">Coming soon</div>
+      </article>
+
+      <article class="card">
+        <div class="thumb"></div>
+        <div class="category">Culture</div>
+        <div class="title">기록 노트</div>
+        <div class="meta">Coming soon</div>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 AKI KO. All rights reserved.
+  </footer>
 </body>
 </html>
